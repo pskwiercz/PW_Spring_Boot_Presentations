@@ -21,7 +21,7 @@ public interface BookController {
 
 //    @Operation(description = "View a list of available books")
 //    @ApiResponses(value = {
-//            @ApiResponse(responseCode = "200", description = "Successfully retrieved list", content = {@Content(mediaType = "application/json", schema = @Schema(implementation = Book.class))}),
+//            @ApiResponse(responseCode = "200", description = "Successfully retrieved list", content = {@Content(mediaType = "application/json", schema = @Schema(implementation = Book.class)), @Content(mediaType = "application/xml", schema = @Schema(implementation = Book.class))}),
 //            @ApiResponse(responseCode = "401", description = "You are not authorized to view the resource", content = {@Content(mediaType = "", schema = @Schema())}),
 //            @ApiResponse(responseCode = "403", description = "Accessing the resource you were trying to reach is forbidden", content = {@Content(mediaType = "", schema = @Schema())}),
 //            @ApiResponse(responseCode = "404", description = "The resource you were trying to reach is not found", content = {@Content(mediaType = "", schema = @Schema())})

@@ -5,10 +5,12 @@ import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
 @Getter @Setter @NoArgsConstructor @AllArgsConstructor @ToString
 //@Schema(description = "All details about the book.")
+@XmlRootElement
 public class Book {
 
     @Id

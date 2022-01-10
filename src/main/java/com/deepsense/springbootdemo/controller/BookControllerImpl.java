@@ -2,6 +2,7 @@ package com.deepsense.springbootdemo.controller;
 
 import com.deepsense.springbootdemo.model.Book;
 import com.deepsense.springbootdemo.repository.BookRepository;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,7 +28,7 @@ public class BookControllerImpl implements BookController {
     }
 
     @Override
-    @GetMapping("/book")
+    @GetMapping(path = "/book", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE, MediaType.TEXT_XML_VALUE})
     public List<Book> getAllBooks() {
         return bookRepository.findAll();
     }
